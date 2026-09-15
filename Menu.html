@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cozy Corner – Online Menus</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background-color: #f5f0e8;
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #5c3317;
+      margin-bottom: 8px;
+      font-size: 2.2rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #7a5c3e;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .menus-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    /* Shared menu styles – 400px × 550px */
+    .menu {
+      width: 400px;
+      height: 550px;
+      border: 8px double #8b5a2b;
+      border-radius: 12px;
+      padding: 25px 20px;
+      margin: 15px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Semi-transparent overlay so text is readable over the image */
+    .menu::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    .menu > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 0 0 15px 0;
+      letter-spacing: 2px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+      padding-bottom: 8px;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+
+    .item-name {
+      font-weight: bold;
+      display: block;
+    }
+
+    .item-price {
+      float: right;
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .item-desc {
+      font-size: 0.82rem;
+      font-style: italic;
+      opacity: 0.9;
+      clear: both;
+    }
+
+    /* Unique background images + background properties */
+    .breakfast {
+      background-image: url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=800&q=80');
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+
+    .lunch {
+      background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .dinner {
+      background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80');
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    /* Small visual differences with extra padding/margin on sections */
+    .section-title {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: #ffecb3;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Cozy Corner</h1>
+  <p class="subtitle">Fresh • Local • Homemade</p>
+
+  <div class="menus-container">
+
+    <!-- BREAKFAST MENU -->
+    <div class="menu breakfast">
+      <h2>Breakfast</h2>
+
+      <div class="section-title">Favorites</div>
+      <ul>
+        <li>
+          <span class="item-name">Fluffy Pancake Stack <span class="item-price">$9.50</span></span>
+          <span class="item-desc">Buttermilk pancakes with maple syrup & berries</span>
+        </li>
+        <li>
+          <span class="item-name">Avocado Toast <span class="item-price">$8.75</span></span>
+          <span class="item-desc">Sourdough, smashed avocado, chili flakes, poached egg</span>
+        </li>
+        <li>
+          <span class="item-name">Classic Eggs Benedict <span class="item-price">$12.00</span></span>
+          <span class="item-desc">English muffin, ham, hollandaise, two poached eggs</span>
+        </li>
+      </ul>
+
+      <div class="section-title">Drinks</div>
+      <ul>
+        <li>
+          <span class="item-name">Fresh Orange Juice <span class="item-price">$4.50</span></span>
+        </li>
+        <li>
+          <span class="item-name">Cappuccino <span class="item-price">$4.25</span></span>
+        </li>
+        <li>
+          <span class="item-name">Herbal Tea Selection <span class="item-price">$3.75</span></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- LUNCH MENU -->
+    <div class="menu lunch">
+      <h2>Lunch</h2>
+
+      <div class="section-title">Mains</div>
+      <ul>
+        <li>
+          <span class="item-name">Grilled Chicken Salad <span class="item-price">$13.50</span></span>
+          <span class="item-desc">Mixed greens, cherry tomatoes, feta, lemon vinaigrette</span>
+        </li>
+        <li>
+          <span class="item-name">Club Sandwich <span class="item-price">$12.75</span></span>
+          <span class="item-desc">Turkey, bacon, lettuce, tomato, mayo on toasted bread</span>
+        </li>
+        <li>
+          <span class="item-name">Tomato Basil Soup <span class="item-price">$7.50</span></span>
+          <span class="item-desc">Served with warm garlic bread</span>
+        </li>
+      </ul>
+
+      <div class="section-title">Sides & Drinks</div>
+      <ul>
+        <li>
+          <span class="item-name">Sweet Potato Fries <span class="item-price">$5.00</span></span>
+        </li>
+        <li>
+          <span class="item-name">Iced Tea / Lemonade <span class="item-price">$3.50</span></span>
+        </li>
+        <li>
+          <span class="item-name">Sparkling Water <span class="item-price">$3.00</span></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- DINNER MENU -->
+    <div class="menu dinner">
+      <h2>Dinner</h2>
+
+      <div class="section-title">Entrées</div>
+      <ul>
+        <li>
+          <span class="item-name">Herb-Crusted Salmon <span class="item-price">$22.00</span></span>
+          <span class="item-desc">With roasted vegetables & lemon butter sauce</span>
+        </li>
+        <li>
+          <span class="item-name">Pasta Primavera <span class="item-price">$16.50</span></span>
+          <span class="item-desc">Seasonal vegetables in a light garlic cream sauce</span>
+        </li>
+        <li>
+          <span class="item-name">Ribeye Steak <span class="item-price">$28.00</span></span>
+          <span class="item-desc">8 oz, served with mashed potatoes & grilled asparagus</span>
+        </li>
+      </ul>
+
+      <div class="section-title">Desserts & Drinks</div>
+      <ul>
+        <li>
+          <span class="item-name">Chocolate Lava Cake <span class="item-price">$8.50</span></span>
+        </li>
+        <li>
+          <span class="item-name">House Red / White Wine <span class="item-price">$9.00</span></span>
+        </li>
+        <li>
+          <span class="item-name">Espresso <span class="item-price">$3.50</span></span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
