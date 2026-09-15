@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Scheme Assignment – Autumn Leaves</title>
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #f8f5f0;
+      margin: 40px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    p.intro {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    table {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      background: white;
+    }
+    th.scheme-name {
+      font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-style: italic;
+      letter-spacing: 2px;
+      color: #5c3317;
+      background-color: #f5e6d3;
+      padding: 18px;
+      border: 2px solid #8b5a2b;
+    }
+    td {
+      border: 1px solid #8b5a2b;
+      padding: 14px 10px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    /* Color name cells – background set to the actual color */
+    .color-name {
+      font-weight: bold;
+      font-size: 1.05rem;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+    .crimson   { background-color: #DC143C; }
+    .burnt     { background-color: #CC5500; }
+    .golden    { background-color: #FFD700; color: #333; text-shadow: none; }
+    .olive     { background-color: #556B2F; }
+
+    .hex-row td, .rgb-row td, .hsl-row td {
+      background-color: #fffaf0;
+      font-family: Consolas, 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+    .label {
+      background-color: #e8d5b7 !important;
+      font-weight: bold;
+      font-family: Georgia, serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Color Scheme Practice</h1>
+  <p class="intro">Inspired by the warm, rich tones of falling leaves in autumn.</p>
+
+  <table>
+    <!-- Scheme name as table header with font styles -->
+    <thead>
+      <tr>
+        <th class="scheme-name" colspan="5">Autumn Leaves</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Color names with background colors -->
+      <tr>
+        <td class="label">Color Name</td>
+        <td class="color-name crimson">Crimson Red</td>
+        <td class="color-name burnt">Burnt Orange</td>
+        <td class="color-name golden">Golden Yellow</td>
+        <td class="color-name olive">Olive Green</td>
+      </tr>
+      <!-- Hex values -->
+      <tr class="hex-row">
+        <td class="label">Hex</td>
+        <td>#DC143C</td>
+        <td>#CC5500</td>
+        <td>#FFD700</td>
+        <td>#556B2F</td>
+      </tr>
+      <!-- RGB values -->
+      <tr class="rgb-row">
+        <td class="label">RGB</td>
+        <td>rgb(220, 20, 60)</td>
+        <td>rgb(204, 85, 0)</td>
+        <td>rgb(255, 215, 0)</td>
+        <td>rgb(85, 107, 47)</td>
+      </tr>
+      <!-- HSL values -->
+      <tr class="hsl-row">
+        <td class="label">HSL</td>
+        <td>hsl(348, 83%, 47%)</td>
+        <td>hsl(25, 100%, 40%)</td>
+        <td>hsl(51, 100%, 50%)</td>
+        <td>hsl(82, 39%, 30%)</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
